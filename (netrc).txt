@@ -1,0 +1,6 @@
+machine github.com
+login nmachado@nub8.net
+password Kw23WSSPn9m3YN5
+machine api.github.com
+login nmachado@nub8.net
+password Kw23WSSPn9m3YN5
