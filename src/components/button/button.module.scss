@@ -1,9 +1,9 @@
 @import '../../styles/global.scss';
 
-.container {
+.button {
     width: $width;
     height: $height;
-    display: $display;
+    display: flex;
     align-items: $alignItems;
     justify-content: $justifyContent;
     border-radius: $borderRadius;

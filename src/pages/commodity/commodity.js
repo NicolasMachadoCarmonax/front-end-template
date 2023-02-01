@@ -1,22 +1,29 @@
-import { BaseApp, NavApp } from '../../components/app/app.stories';
+import { App } from '../../components/app/app.stories';
 import { Module, Header, Section } from '../../components/container/container.stories';
-import { BaseNav } from '../../components/nav/nav.stories';
+import { NavRounded } from '../../components/nav/nav.stories';
 import { Title } from '../../components/text/text.stories';
+
 
 const CommodityComponent = () => {
 
-    return <NavApp>
-        <BaseNav modules={{
-            commodity: 'equalizer',
-            farms: 'equalizer'
-        }}/>
+
+    return <App config={{ nav: true }} >
+        <NavRounded config={{
+            modules: {
+                commodity: 'equalizer',
+                logout: 'logout'
+            }
+        }} />
         <Module>
             <Header>
-                <Title title='Commodity'></Title>
+                <Title title="Commodity" />
             </Header>
-            <Section/>
+            <Section>
+
+            </Section>
         </Module>
-    </NavApp>
+    </App >
+
 
 }
 
