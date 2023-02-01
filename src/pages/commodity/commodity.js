@@ -1,15 +1,23 @@
-// const { Module } = require('../../components/container/container.stories');
-// const { Title } = require('../../components/text/text.stories');
+import { BaseApp, NavApp } from '../../components/app/app.stories';
+import { Module, Header, Section } from '../../components/container/container.stories';
+import { BaseNav } from '../../components/nav/nav.stories';
+import { Title } from '../../components/text/text.stories';
 
-const CommodityComponent = ({title}) => {
+const CommodityComponent = () => {
 
-    console.log(title)
+    return <NavApp>
+        <BaseNav modules={{
+            commodity: 'equalizer',
+            farms: 'equalizer'
+        }}/>
+        <Module>
+            <Header>
+                <Title title='Commodity'></Title>
+            </Header>
+            <Section/>
+        </Module>
+    </NavApp>
 
-    return <>x</>
-
-    // return <Module> 
-    //         <Title title={title}></Title>
-    // </Module>
 }
 
 export default CommodityComponent

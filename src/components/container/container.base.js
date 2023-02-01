@@ -1,13 +1,12 @@
-const { ContainerJSX } = require('./container.jsx.js');
+import React from 'react';
+import { ContainerJSX } from './container.jsx.js';
+
 
 // Component base
-const Container = (props) => {
-    console.log(props)
+export const Container = (props) => {
+    console.log(props.args)
     // Hooks here
-
     // JSX call here, pass hooks as props
-    return <ContainerJSX />
+    return <ContainerJSX styles={props.styles}>{props.args.children}</ContainerJSX>
 
 }
-
-module.exports = { Container }

@@ -1,19 +1,11 @@
 import React from 'react';
+import classes from './text.module.scss';
 
-const TextJSX = (props) => {
+export const TextJSX = (props) => {
     // Recieves hooks from base
-    console.log(props)
     const { title } = props
     // JSX goes here
-    return <div style={style}>
+    return <div className={classes.text} style={props?.styles}>
         {title}
     </div>
 }
-
-const style = {
-    fontWeight: '400',
-    fontSize: '24px',
-    color: 'red'
-}
-
-module.exports = { TextJSX }

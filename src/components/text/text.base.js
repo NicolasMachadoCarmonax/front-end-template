@@ -1,13 +1,11 @@
-const { TextJSX } = require('./text.jsx.js');
-
+import { TextJSX } from './text.jsx.js'
 // Component base
 const Text = (props) => {
-    console.log(props)
-    // const { title } = props
+    const { title } = props
     // Hooks here
 
     // JSX call here, pass hooks as props
-    return <TextJSX/>
+    return <TextJSX styles={props?.styles} title={title} />
 
 }
 

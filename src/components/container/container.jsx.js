@@ -1,21 +1,10 @@
-const { containerColor, borderRadius, width, height, display } = require('@/styles/global.js');
-
 import React from 'react';
-
-const ContainerJSX = (props) => {
+import classes from './container.module.scss'
+export const ContainerJSX = (props) => {
     // Recieves hooks from base
 
     // JSX goes here
-    return <div style={style}>
-                </div>
+    return <div className={classes.container} style={props.styles}>
+        {props.children}
+    </div>
 }
-
-const style = {
-    width,
-    height,
-    display,
-    backgroundColor: containerColor,
-    borderRadius,
-}
-
-module.exports = { ContainerJSX }

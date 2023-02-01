@@ -1,0 +1,11 @@
+@import '../../styles/global.scss';
+
+.container {
+    width: $width;
+    height: $height;
+    display: $display;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    border-radius: $borderRadius;
+
+}
