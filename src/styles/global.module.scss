@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$width: 100%;
+$height: 100%;
+
+$display: grid;
+$alignItems: center;
+$justifyContent: center;
+$gridTemplateColumns: 100%;
+$gridTemplateRows: 100%;
+
+$paddingVertical: 1%;
+$paddingHorizontal: 1%;
+
+$borderRadius: .4vw;
+
+$titleSize:  clamp(16px, 1.4vw, 200px);
+$titleWeight: 700;
+$subtitleSize:  clamp(14px, 1.2vw, 200px);
+$subtitleWeight: 600;
+
+$fontSize: clamp(14px,1.1vw,200px);
+$fontWeight: 500;
+$fontFamily: 'Raleway';
+
+$baseColor: #122247;
+$darkBaseColor: #060f24;
+
+$containerColor: #fff;
+$buttonColor: #fff;
+$buttonBorder: #21B5E1;
+
+:export {
+    baseColor: $baseColor;
+    darkBaseColor: $darkBaseColor;
+}

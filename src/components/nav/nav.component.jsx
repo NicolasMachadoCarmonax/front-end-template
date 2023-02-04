@@ -1,28 +1,23 @@
-import React, { useRef } from 'react';
-import classes from './nav.module.scss';
+import React, { createRef, useRef } from 'react';
 import { mapNavModules, onNavOut, onNavOver } from './nav.functions';
-import { VerticalFlex } from '../container/container.stories';
+import { Container, VerticalFlex } from '../container/container.stories';
 import { useRecoilState } from 'recoil';
 import { navFlagState } from './nav.state';
 
 export const NavComponent = (props) => {
-    const { config, events, styles, children } = props
-    const { modules } = config
+    const { data, config, events, style, className, children } = props
+    
     const [navFlag, setNavFlag] = useRecoilState(navFlagState);
-    const navRef = useRef()
 
-    return <div
-        onMouseOver={() => { onNavOver({ setNavFlag, navRef }) }}
-        onMouseOut={() => { onNavOut({ setNavFlag, navRef }) }}
-        ref={navRef}
-        className={classes.nav}
-        style={styles}
+    return <VerticalFlex
+        style={style}
+        className={className}
+        events={{
+            onMouseOver: (ref) => { onNavOver({ setNavFlag, ref }) },
+            onMouseOut: (ref) => { onNavOut({ setNavFlag, ref }) }
+        }}
     >
-        {navFlag ?
-            <VerticalFlex styles={{ justifyContent: 'flex-start', height: '90vh', gap: '2vh', pointerEvents: 'none' }}>{mapNavModules({ modules })}</VerticalFlex>
-            :
-            <></>
-        }
+        {navFlag && mapNavModules({ containers: data?.containers })}
+    </VerticalFlex >
 
-    </div>
 }

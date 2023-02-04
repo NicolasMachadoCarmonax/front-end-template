@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import '../../styles/global.module.scss';
 
 .button {
     width: $width;
@@ -6,6 +6,19 @@
     display: flex;
     align-items: $alignItems;
     justify-content: $justifyContent;
-    border-radius: $borderRadius;
+    border: 1px solid $buttonBorder;
     transition: all 0.25;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.navButton {
+    align-self: center;
+    height: 3.5vw;
+    border: none;
+    background-color: $buttonColor;
+    z-index: 1;
 }

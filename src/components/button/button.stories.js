@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { ButtonComponent } from './button.component.jsx';
+import classes from './button.module.scss'
 
 export default {
     title: 'App/Button',
@@ -15,6 +15,7 @@ export default {
     }
 }
 
-export const Button = (props) => <ButtonComponent config={props?.config} events={props?.events} styles={props?.styles} children={props.children} />
+export const Button = (props) => <ButtonComponent className={`${classes.button} ${props?.className}`} {...props}/>
 
-export const NavButton = (props) => <ButtonComponent config={props?.config} events={props?.events}  styles={{ height: '9%', width: '55%', backgroundColor: '#fff', zIndex: 1, ...props?.styles}}        children={props.children} />
+export const NavButton = (props) => <ButtonComponent className={`${classes.button} ${classes.navButton} ${props?.className}`} {...props} />
+

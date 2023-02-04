@@ -1,13 +1,7 @@
-@import '../../styles/global.scss';
+@import '../../styles/global.module.scss';
 
 .nav {
-    position: relative;
-    left: 96vw;
-    height: 100vh;
-    max-height: 100vh;
-    width: 4vw;
-    display: flex;
-    align-items: $alignItems;
-    justify-content: $justifyContent;
-    transition: all 0.25s;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
 }

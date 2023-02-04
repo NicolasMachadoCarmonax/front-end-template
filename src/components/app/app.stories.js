@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { AppComponent } from './app.component.jsx';
+import classes from './app.module.scss'
 
 export default {
     title: 'App/App',
@@ -15,9 +15,6 @@ export default {
     }
 }
 
-export const App = (args) => <AppComponent config={args?.config} events={args?.events} styles={args?.styles} children={args.children}/>
+export const App = (props) => <AppComponent className={`${classes.app} ${props?.className}`} {...props}/>
 
-// export const NavApp = (args) => <App config={args?.config} events={args?.events} styles={{
-//     gridTemplateColumns: '2% 84% 12% 2%',
-//     ...args?.styles
-// }} children={args.children}/>
+export const AppPad = (props) => <AppComponent className={`${classes.app} ${classes.pad} ${props?.className}`} {...props}/>

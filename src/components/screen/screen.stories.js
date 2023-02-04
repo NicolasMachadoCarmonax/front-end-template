@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContainerComponent } from './container.component.jsx';
+import { ContainerComponent } from './screen.component.jsx';
 import classes from './container.module.scss'
 
 export default {

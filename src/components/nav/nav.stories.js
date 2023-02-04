@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavComponent } from './nav.component.jsx';
+import classes from './nav.module.scss';
 
 export default {
     title: 'App/Nav',
@@ -14,9 +15,4 @@ export default {
     }
 }
 
-export const Nav = (args) => <NavComponent config={args?.config} events={args?.events} styles={args?.styles} />
-
-export const NavRounded = (args) => <NavComponent config={args?.config} events={args?.events} styles={{
-    borderRadius: '3vw 0 0 3vw', 
-    ...args?.styles
-}} />
+export const Nav = (props) => <NavComponent className={`${classes.nav} ${props?.className}`} {...props}/>

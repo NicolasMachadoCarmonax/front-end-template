@@ -1,17 +1,18 @@
 import EqualizerRounded from '@mui/icons-material/EqualizerRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import { NavButton } from "../button/button.stories";
+import variables from '../../styles/global.module.scss';
 
 // Maps modules object passed from page component
 export const mapNavModules = (props) => {
+    const { containers } = props; // modules passed on from page component
     const modulesJSX = [] // array for JSX module elements 
-    const { modules } = props; // modules passed on from page component
     Object
-        .keys(modules)
-        .map((route, key) => {
+        .keys(containers)
+        .forEach((route, key) => {
             let iconJSX;
             const fontSize = '2vw'; // icon's width
-            switch (modules[route]) {
+            switch (containers[route]) {
                 case 'equalizer':
                     iconJSX = <EqualizerRounded sx={{ fontSize }} />
                     break
@@ -29,27 +30,23 @@ export const mapNavModules = (props) => {
 }
 
 export function onNavOver(props) {
-    const { setNavFlag, navRef } = props;
+    const { setNavFlag, ref } = props;
 
     setNavFlag(true)
+
     document.querySelector('body').style.cursor = 'pointer';
+    const nav = ref?.current;
 
-    const nav = navRef?.current;
-    nav.style.backgroundColor = 'rgb(3, 13, 37)'
-    nav.style.left = '93vw'
-    nav.style.width = '7vw'
-
+    nav.style.backgroundColor = variables.darkBaseColor
 }
 
 export function onNavOut(props) {
-    const { setNavFlag, navRef } = props;
+    console.log(props)
+    const { setNavFlag, ref } = props;
 
     setNavFlag(false)
     document.querySelector('body').style.cursor = 'initial';
 
-    const nav = navRef?.current;
-    nav.style.backgroundColor = 'transparent'
-    nav.style.left = '96vw'
-    nav.style.width = '4vw'
-
+    const nav = ref?.current;
+    nav.style.backgroundColor = variables.baseColor
 }

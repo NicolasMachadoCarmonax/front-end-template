@@ -1,8 +1,23 @@
-@import '../../styles/global.scss';
+@import '../../styles/global.module.scss';
 
 .text {
     color: $baseColor;
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-family: $fontFamily;
+    text-align: center;
+}
+
+.title {
+    font-size: $titleSize;
+    font-weight: $titleWeight;
+}
+
+.subtitle {
+    font-size: $subtitleSize;
+    font-weight: $subtitleWeight;
+}
+
+.color {
+    color: $buttonColor;
 }
