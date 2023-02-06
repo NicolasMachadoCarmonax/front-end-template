@@ -7,10 +7,11 @@ export const ContainerComponent = (props) => {
 
     const ref = useRef()
 
+    console.log(events)
+
     return <div
         ref={ref}
-        onMouseOver={() => { events?.onMouseOver(ref) }}
-        onMouseOut={() => { events?.onMouseOut(ref) }}
+        {...events}
         className={config?.ghost ? `${classes.ghost} ${className}` : className}
         style={style}>
         {children}

@@ -1,44 +1,11 @@
-@import '../../styles/global.module.scss';
-
-.container {
-    width: $width;
-    height: $height;
-    display: $display;
-    grid-template-columns: $gridTemplateColumns;
-    align-items: $alignItems;
-    justify-content: $justifyContent;
-    border-radius: $borderRadius;
-    overflow: scroll;
-    transition: all 0.25;
-    background-color: $containerColor;
+.screenWrapper {
+    height: 100%;
 }
 
-.pad {
-    padding-top: $paddingVertical;
-    padding-right: $paddingHorizontal;
-    padding-bottom: $paddingVertical;
-    padding-left: $paddingHorizontal;
-}
-
-.container::-webkit-scrollbar { 
-    display: none
-}
-
-.color {
-    background-color: $containerColor;
-}
-
-.horizontalFlex {
-    display: flex;
-    overflow: none;
-}
-
-.verticalFlex {
-    display: flex;
-    flex-direction: column;
-    overflow: none;
-}
-
-.ghost {
-    background-color: $baseColor;
+.screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
 }

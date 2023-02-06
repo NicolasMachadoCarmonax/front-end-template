@@ -11,7 +11,7 @@ export const mapNavModules = (props) => {
         .keys(containers)
         .forEach((route, key) => {
             let iconJSX;
-            const fontSize = '2vw'; // icon's width
+            const fontSize = '2vw'; // icon's width ?
             switch (containers[route]) {
                 case 'equalizer':
                     iconJSX = <EqualizerRounded sx={{ fontSize }} />
@@ -21,7 +21,7 @@ export const mapNavModules = (props) => {
                     break
             }
             modulesJSX.push(
-                <NavButton onClick={console.log(`/${route}`)} key={key}>
+                <NavButton style={props?.style} onClick={console.log(`/${route}`)} key={key}>
                     {iconJSX}
                 </NavButton>
             )

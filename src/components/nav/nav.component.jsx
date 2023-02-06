@@ -5,19 +5,19 @@ import { useRecoilState } from 'recoil';
 import { navFlagState } from './nav.state';
 
 export const NavComponent = (props) => {
-    const { data, config, events, style, className, children } = props
+    const { data, config, events, style, className, children, childrenStyle } = props
     
     const [navFlag, setNavFlag] = useRecoilState(navFlagState);
 
     return <VerticalFlex
         style={style}
         className={className}
-        events={{
-            onMouseOver: (ref) => { onNavOver({ setNavFlag, ref }) },
-            onMouseOut: (ref) => { onNavOut({ setNavFlag, ref }) }
-        }}
+        // events={{
+        //     onMouseOver: (ref) => { onNavOver({ setNavFlag, ref }) },
+        //     onMouseOut: (ref) => { onNavOut({ setNavFlag, ref }) }
+        // }}
     >
-        {navFlag && mapNavModules({ containers: data?.containers })}
+        {navFlag && mapNavModules({ containers: data?.containers, style: childrenStyle?.buttons })}
     </VerticalFlex >
 
 }
