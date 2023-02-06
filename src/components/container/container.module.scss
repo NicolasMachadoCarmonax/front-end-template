@@ -30,15 +30,14 @@
 
 .horizontalFlex {
     display: flex;
-    overflow: none;
 }
 
 .verticalFlex {
     display: flex;
     flex-direction: column;
-    overflow: none;
 }
 
 .ghost {
     background-color: transparent;
+    border-radius: 0;
 }

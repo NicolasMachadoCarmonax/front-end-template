@@ -18,11 +18,13 @@ export const ScreenComponent = (props) => {
     return config?.state && <>
         <Container
             {...filteredProps}
-            className={classes.screen}>
+            className={classes.screen}
+            style={childrenStyle?.screen}>
         </Container>
         <Container
             config={{ ghost: true }}
-            style={{ zIndex: 2 }}>
+            style={{ zIndex: 2, ...childrenStyle?.ghost }}
+        >
             {props?.children}
         </Container>
     </>

@@ -15,7 +15,7 @@ export default {
     }
 }
 
-export const Button = (props) => <ButtonComponent className={`${classes.button} ${props?.className}`} {...props}/>
+export const Button = (props) => <ButtonComponent {...props}  className={`${classes.button} ${props?.className}`}/>
 
-export const NavButton = (props) => <ButtonComponent className={`${classes.button} ${classes.navButton} ${props?.className}`} {...props} />
+// export const NavButton = (props) => <ButtonComponent className={`${classes.button} ${classes.navButton} ${props?.className}`} {...props} />
 

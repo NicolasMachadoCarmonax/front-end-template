@@ -15,6 +15,6 @@ export default {
     }
 }
 
-export const App = (props) => <AppComponent className={`${classes.app} ${props?.className}`} {...props}/>
+export const App = (props) => <AppComponent {...props} className={`${classes.app} ${props?.className}`}/>
 
-export const AppPad = (props) => <AppComponent className={`${classes.app} ${classes.pad} ${props?.className}`} {...props}/>
+export const AppPad = (props) => <AppComponent {...props} className={`${classes.app} ${classes.pad} ${props?.className}`}/>

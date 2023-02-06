@@ -1,3 +1,4 @@
+@import '../../styles/global.module.scss';
 
 .screen {
     width: 100vw;
@@ -6,4 +7,5 @@
     left: 0;
     top: 0;
     z-index: 1;
+    background-color: $screenColor;
 }

@@ -15,4 +15,4 @@ export default {
     }
 }
 
-export const Hover = (props) => <HoverComponent className={`${classes.hover} ${props?.className}`} {...props} />
+export const Hover = (props) => <HoverComponent {...props} className={`${classes.hover} ${props?.className}`} />

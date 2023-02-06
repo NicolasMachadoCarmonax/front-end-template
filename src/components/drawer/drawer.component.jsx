@@ -14,12 +14,14 @@ export const DrawerComponent = (props) => {
 
     return <>
         <Hover //Trigger in
+            style={props?.childrenStyle?.hover}
             config={{ state: !screenState }}
             events={{ onMouseOver: showScreen }}
         />
         <Screen //Trigger out
             config={{ state: screenState }}
             events={{ onMouseOver: hideScreen }}
+            childrenStyle={props?.childrenStyle}
         >
             {children}
         </Screen>

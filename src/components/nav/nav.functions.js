@@ -1,6 +1,6 @@
 import EqualizerRounded from '@mui/icons-material/EqualizerRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import { NavButton } from "../button/button.stories";
+import { Button } from "../button/button.stories";
 import variables from '../../styles/global.module.scss';
 
 // Maps modules object passed from page component
@@ -21,9 +21,9 @@ export const mapNavModules = (props) => {
                     break
             }
             modulesJSX.push(
-                <NavButton style={props?.style} onClick={console.log(`/${route}`)} key={key}>
+                <Button style={props?.style} onClick={console.log(`/${route}`)} key={key}>
                     {iconJSX}
-                </NavButton>
+                </Button>
             )
         }) // creates JSX module elements and pushes to modulesJSX
     return modulesJSX

@@ -16,11 +16,4 @@ export default {
     }
 }
 
-export const Nav = (props) => <NavComponent className={`${classes.nav} ${props?.className}`} {...props} />
-
-export const NavPad = (props) => {
-    return <ContainerPad style={props?.childrenStyle?.containerPad} config={{ ghost: true }}>
-        <NavComponent className={`${classes.nav} ${props?.className}`} {...props} />
-    </ContainerPad>
-
-}
+export const Nav = (props) => <NavComponent {...props} className={`${classes.nav} ${props?.className}`}/>

@@ -8,7 +8,7 @@ export const NavComponent = (props) => {
     const { data, config, events, style, className, children, childrenStyle } = props
     
     const [navFlag, setNavFlag] = useRecoilState(navFlagState);
-
+    console.log('x', className)
     return <VerticalFlex
         style={style}
         className={className}

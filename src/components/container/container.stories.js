@@ -15,14 +15,14 @@ export default {
     }
 }
 
-export const Container = (props) => <ContainerComponent className={`${classes.container} ${props?.className}`} {...props} />
+export const Container = (props) => <ContainerComponent {...props} className={`${classes.container} ${props?.className}`}/>
 
-export const ContainerPad = (props) => <ContainerComponent className={`${classes.container} ${classes.pad} ${props?.className}`}{...props} />
+export const ContainerPad = (props) => <ContainerComponent {...props} className={`${classes.container} ${classes.pad} ${props?.className}`} />
 
-export const HorizontalFlex = (props) => <ContainerComponent className={`${classes.container} ${classes.horizontalFlex} ${props?.className}`} {...props} />;
+export const HorizontalFlex = (props) => <ContainerComponent {...props} className={`${classes.container} ${classes.horizontalFlex} ${props?.className}`} />;
 
-export const VerticalFlex = (props) => <ContainerComponent className={`${classes.container} ${classes.verticalFlex} ${props?.className}`} {...props} />
+export const VerticalFlex = (props) => <ContainerComponent {...props} className={`${classes.container} ${classes.verticalFlex} ${props?.className}`} />
 
-export const VerticalFlexPad = (props) => <ContainerComponent className={`${classes.container} ${classes.verticalFlex} ${classes.pad} ${props?.className}`}{...props} />
+export const VerticalFlexPad = (props) => <ContainerComponent {...props} className={`${classes.container} ${classes.verticalFlex} ${classes.pad} ${props?.className}`} />
 
-export const HorizontalFlexPad = (props) => <ContainerComponent className={`${classes.container} ${classes.horitzontalFlex} ${classes.pad} ${props?.className}`}{...props} />
+export const HorizontalFlexPad = (props) => <ContainerComponent {...props} className={`${classes.container} ${classes.horitzontalFlex} ${classes.pad} ${props?.className}`} />
