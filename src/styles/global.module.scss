@@ -14,7 +14,7 @@ $paddingHorizontal: 1%;
 
 $borderRadius: .4vw;
 
-$titleSize:  clamp(16px, 1.4vw, 200px);
+$titleSize:  clamp(16px, 1.2vw, 200px);
 $titleWeight: 700;
 $subtitleSize:  clamp(14px, 1.2vw, 200px);
 $subtitleWeight: 600;
@@ -22,12 +22,13 @@ $subtitleWeight: 600;
 $fontSize: clamp(14px,1.1vw,200px);
 $fontWeight: 500;
 $fontFamily: 'Raleway';
+$fontColor: #122247;
 
 $baseColor: #122247;
 $darkBaseColor: #060f24;
 
 $containerColor: #fff;
-$buttonColor: #fff;
+$buttonColor: #21B5E1;
 $buttonBorder: #21B5E1;
 
 :export {

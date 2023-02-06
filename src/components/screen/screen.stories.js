@@ -15,4 +15,4 @@ export default {
     }
 }
 
-export const Screen = (props) => <ScreenComponent className={`${classes.screenWrapper} ${props?.className}`} {...props} />
+export const Screen = (props) => <ScreenComponent className={`${props?.className}`} {...props} />

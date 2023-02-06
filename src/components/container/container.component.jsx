@@ -7,7 +7,6 @@ export const ContainerComponent = (props) => {
 
     const ref = useRef()
 
-    console.log(events)
 
     return <div
         ref={ref}

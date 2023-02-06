@@ -1,28 +1,31 @@
-import React from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { Container, ContainerPad } from '../container/container.stories';
-import { navFlagState } from '../nav/nav.state';
+import React, { useEffect, useState } from 'react';
+import { Container } from '../container/container.stories';
 import classes from './screen.module.scss'
-import { screenFlagState } from './screen.state';
 
 export const ScreenComponent = (props) => {
-    const [screenFlag, setScreenFlag] = useRecoilState(screenFlagState);
+    const { data, config, events, style, className, children, childrenStyle } = props
 
-    function screenClick(props) { setScreenFlag(false) }
+    const [filteredProps, setFilteredProps] = useState({})
 
-    console.log(props?.config?.screenState)
+    function filterProps() {
+        setFilteredProps({ data, config, events, style, className, childrenStyle })
+    }
 
-    return props?.config?.screenState && <Container
-        {...props}>
+    useEffect(() => {
+        filterProps()
+    }, [])
+
+    return config?.state && <>
         <Container
-            events={{
-                onClick: (ref) => { screenClick(ref) }
-            }}
+            {...filteredProps}
             className={classes.screen}>
-
         </Container>
-        {props?.children}
-    </Container>
+        <Container
+            config={{ ghost: true }}
+            style={{ zIndex: 2 }}>
+            {props?.children}
+        </Container>
+    </>
 }
 
 

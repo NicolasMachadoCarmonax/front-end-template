@@ -29,7 +29,7 @@ export const mapNavModules = (props) => {
     return modulesJSX
 }
 
-export function onNavOver(props) {
+export const animationEntry = (props) => {
     const { setNavFlag, ref } = props;
 
     setNavFlag(true)
@@ -38,15 +38,4 @@ export function onNavOver(props) {
     const nav = ref?.current;
 
     nav.style.backgroundColor = variables.darkBaseColor
-}
-
-export function onNavOut(props) {
-    console.log(props)
-    const { setNavFlag, ref } = props;
-
-    setNavFlag(false)
-    document.querySelector('body').style.cursor = 'initial';
-
-    const nav = ref?.current;
-    nav.style.backgroundColor = variables.baseColor
 }

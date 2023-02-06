@@ -12,12 +12,8 @@ export const NavComponent = (props) => {
     return <VerticalFlex
         style={style}
         className={className}
-        // events={{
-        //     onMouseOver: (ref) => { onNavOver({ setNavFlag, ref }) },
-        //     onMouseOut: (ref) => { onNavOut({ setNavFlag, ref }) }
-        // }}
     >
-        {navFlag && mapNavModules({ containers: data?.containers, style: childrenStyle?.buttons })}
+        {true && mapNavModules({ containers: data?.containers, style: childrenStyle?.buttons })}
     </VerticalFlex >
 
 }
