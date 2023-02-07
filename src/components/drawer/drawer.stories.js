@@ -15,4 +15,4 @@ export default {
     }
 }
 
-export const Drawer = (props) => <DrawerComponent {...props} className={`${classes.DrawerWrapper} ${props?.className}`} />
+export const Drawer = (props) => <DrawerComponent {...props} className={`${classes.drawer} ${props?.className}`} />

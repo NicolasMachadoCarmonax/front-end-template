@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from '../container/container.stories';
+import { Box } from '../box/box.stories';
 import classes from './screen.module.scss'
 
 export const ScreenComponent = (props) => {
@@ -15,18 +15,20 @@ export const ScreenComponent = (props) => {
         filterProps()
     }, [])
 
+    console.log(config?.state)
+
     return config?.state && <>
-        <Container
+        <Box
             {...filteredProps}
             className={classes.screen}
             style={childrenStyle?.screen}>
-        </Container>
-        <Container
+        </Box>
+        <Box
             config={{ ghost: true }}
             style={{ zIndex: 2, ...childrenStyle?.ghost }}
         >
             {props?.children}
-        </Container>
+        </Box>
     </>
 }
 

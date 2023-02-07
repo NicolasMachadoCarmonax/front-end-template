@@ -10,7 +10,7 @@ export default {
 export const Text = (props) => <TextComponent {...props} className={`${classes.text} ${props?.className}`} />;
 
 
-export const Title = (props) => <TextComponent {...props} className={`${classes.text} ${classes.title} ${props?.className}`} {...props} />;
+export const Title = (props) => <TextComponent {...props} className={`${classes.text} ${classes.title} ${props?.className}`} />;
 
 export const Subtitle = (props) => <TextComponent {...props} className={`${classes.text} ${classes.subtitle} ${props?.className}`} />;
 

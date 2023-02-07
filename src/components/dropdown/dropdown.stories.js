@@ -1,5 +1,6 @@
 import React from 'react';
 import { DropdownComponent } from './dropdown.component.jsx';
+import classes from './dropdown.module.scss';
 
 export default {
     title: 'App/Dropdown',
@@ -15,4 +16,4 @@ export default {
     }
 }
 
-export const Dropdown = (args) => <DropdownComponent key={args?.key} data={args?.data} config={args?.config} events={args?.events} style={args?.style} />
+export const Dropdown = (props) => <DropdownComponent {...props} className={`${classes.dropdown} ${props?.className}`} />

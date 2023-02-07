@@ -1,5 +1,4 @@
 import React from 'react';
-import { ContainerPad } from '../container/container.stories.js';
 import { NavComponent } from './nav.component.jsx';
 import classes from './nav.module.scss';
 

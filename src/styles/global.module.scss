@@ -16,7 +16,7 @@ $paddingHorizontal: 1%;
 
 $borderRadius: .4vw;
 
-$titleSize:  clamp(16px, 1.1vw, 200px);
+$titleSize:  clamp(14px, 1.2vw, 200px);
 $titleWeight: 700;
 $subtitleSize:  clamp(14px, 1.2vw, 200px);
 $subtitleWeight: 600;
@@ -33,13 +33,15 @@ $darkBaseColor: #060f24;
 
 // COMPONENT VALUES //
 
-$containerColor: #fff;
+$boxColor: #fff;
 
 $buttonColor: #fff;
 $buttonBorder: #21B5E1;
 
 $hoverColor: transparent;
 $screenColor: transparent;
+
+$gap: 0;
 
 :export {
     baseColor: $baseColor;

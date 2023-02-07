@@ -1,14 +1,8 @@
 @import '../../styles/global.module.scss';
 
 .button {
-    width: $width;
-    height: $height;
-    display: flex;
-    align-items: $alignItems;
-    justify-content: $justifyContent;
     background-color: $buttonColor;
     border: 1px solid $buttonBorder;
-    transition: all 0.25;
 }
 
 .button:hover {

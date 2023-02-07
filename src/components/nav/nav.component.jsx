@@ -1,19 +1,11 @@
-import React, { createRef, useRef } from 'react';
-import { mapNavModules, onNavOut, onNavOver } from './nav.functions';
-import { Container, VerticalFlex } from '../container/container.stories';
-import { useRecoilState } from 'recoil';
-import { navFlagState } from './nav.state';
+import React from 'react';
+import { mapNavModules } from './nav.functions';
+import { VFlex } from '../box/box.stories';
 
 export const NavComponent = (props) => {
-    const { data, config, events, style, className, children, childrenStyle } = props
-    
-    const [navFlag, setNavFlag] = useRecoilState(navFlagState);
-    console.log('x', className)
-    return <VerticalFlex
-        style={style}
-        className={className}
+    return <VFlex {...props}
     >
-        {true && mapNavModules({ containers: data?.containers, style: childrenStyle?.buttons })}
-    </VerticalFlex >
+        {mapNavModules({ containers: props?.data?.containers, style: props?.childrenStyle?.buttons })}
+    </VFlex >
 
 }

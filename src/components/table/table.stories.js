@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableComponent } from './table.component.jsx';
+import TableComponent from './table.component.jsx';
 
 export default {
     title: 'App/Table',

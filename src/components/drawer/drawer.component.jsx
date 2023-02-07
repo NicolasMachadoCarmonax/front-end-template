@@ -1,16 +1,11 @@
-import React, { useState, createElement, useEffect, cloneElement } from 'react';
-import { Container } from '../container/container.stories';
+import React, { useState } from 'react';
 import { Hover } from '../hover/hover.stories';
 import { Screen } from '../screen/screen.stories';
-import classes from './drawer.module.scss'
 
 export const DrawerComponent = (props) => {
-    const { data, config, events, style, className, children, childrenStyle } = props
-
     const [screenState, setScreenState] = useState(false)
-    const showScreen = () => { setScreenState(true) }
-    const hideScreen = () => { setScreenState(false) }
-
+    const showScreen = () => { console.log('through show screen'); setScreenState(true) }
+    const hideScreen = () => { console.log('through hide screen'); setScreenState(false) }
 
     return <>
         <Hover //Trigger in
@@ -20,13 +15,12 @@ export const DrawerComponent = (props) => {
         />
         <Screen //Trigger out
             config={{ state: screenState }}
-            events={{ onMouseOver: hideScreen }}
             childrenStyle={props?.childrenStyle}
+            events={{ onMouseOver: hideScreen }}
         >
-            {children}
+            {props?.children}
         </Screen>
     </>
 
 }
-// export default forwardRef(DrawerComponent)
 

@@ -1,31 +1,33 @@
 @import '../../styles/global.module.scss';
 
-.container {
+.box {
     width: $width;
     height: $height;
     display: $display;
     grid-template-columns: $gridTemplateColumns;
     align-items: $alignItems;
     justify-content: $justifyContent;
+    gap: $gap;
     border-radius: $borderRadius;
     overflow: scroll;
-    transition: all 0.25;
-    background-color: $containerColor;
+    background-color: $boxColor;
+    transition: all 0.5s ease-in-out;
+}
+.box::-webkit-scrollbar { 
+    display: none
 }
 
-.pad {
+.wrap {
     padding-top: $paddingVertical;
     padding-right: $paddingHorizontal;
     padding-bottom: $paddingVertical;
     padding-left: $paddingHorizontal;
-}
-
-.container::-webkit-scrollbar { 
-    display: none
+    background-color: transparent;
+    border-radius: 0;
 }
 
 .color {
-    background-color: $containerColor;
+    background-color: $boxColor;
 }
 
 .horizontalFlex {
@@ -37,7 +39,9 @@
     flex-direction: column;
 }
 
-.ghost {
-    background-color: transparent;
+.empty {
+    gap: 0;
     border-radius: 0;
+    overflow: hidden;
+    background-color: transparent;
 }

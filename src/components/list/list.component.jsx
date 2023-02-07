@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Container, VerticalFlex } from '../container/container.stories';
-import { Subtitle, Title } from '../text/text.stories';
+import React from 'react';
+import { Box, VFlex } from '../box/box.stories';
+import { Subtitle } from '../text/text.stories';
 import { mapListData, mapListText } from './list.functions';
 export const ListComponent = (props) => {
-    const { data, config, events, style, className, children } = props
+    {/* With Header */ }
+    if (Object.keys(props?.data).length == 1) {
+        return <Box style={{ gridTemplateRows: '1fr 9fr' /* ? */ }}>
+            <VFlex>
+                <Subtitle>{Object.keys(props?.data)}</Subtitle>
+            </VFlex>
 
-    if (Object.keys(data).length == 1) {
-        return <Container style={{ gridTemplateRows: '1fr 9fr' }}>
-            <VerticalFlex>
-                <Subtitle data={{ label: mapListText({ data }) }} />
-            </VerticalFlex>
-
-            <VerticalFlex style={{ justifyContent: 'flex-start', gap: '6%' }}>
-                {mapListData({ data })}
-            </VerticalFlex>
-        </Container>
+            <VFlex style={{ justifyContent: 'flex-start', gap: '6%' }}>
+                {mapListData({ data: { ...props?.data } })}
+            </VFlex>
+        </Box>
     }
-
-    return <Container>
-        <VerticalFlex style={{ justifyContent: 'flex-start', gap: '6%' }}>
-            {mapListData({ data })}
-        </VerticalFlex>
-    </Container>
+    {/* Without Header */ }
+    return <Box>
+        <VFlex style={{ justifyContent: 'flex-start', gap: '6%' }}>
+            {/* {mapListData(props?.data)} */}
+        </VFlex>
+    </Box>
 
 
 }

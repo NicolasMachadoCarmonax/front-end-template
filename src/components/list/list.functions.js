@@ -14,8 +14,3 @@ export const mapListData = (props) => {
         })
     return dataJSX
 }
-
-export const mapListText = (props) => {
-    const { data } = props
-    return Object.keys(data).map((title, key) => { return title })[0]
-}
