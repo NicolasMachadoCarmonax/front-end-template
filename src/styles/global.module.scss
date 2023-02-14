@@ -1,49 +1,264 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// IMPORTS
+    // GOOGLE FONTS // 
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-// MAIN VALUES //
+// PALETTE
+$primaryColor: #524948;
+$secondaryColor: #fff;
+$highlightColor: #925524;
+$softHighlightColor: #d6a47252;
+$hiddenColor: transparent;
+$separationColor: rgba(240,240,240,.8);
 
+// MAIN CSS
+
+// DIMENSIONS
 $width: 100%;
 $height: 100%;
 
+// LAYOUT
 $display: grid;
 $alignItems: center;
 $justifyContent: center;
 $gridTemplateColumns: 100%;
 $gridTemplateRows: 100%;
-
-$paddingVertical: 1%;
-$paddingHorizontal: 1%;
-
-$borderRadius: .4vw;
-
-$titleSize:  clamp(14px, 1.2vw, 200px);
-$titleWeight: 700;
-$subtitleSize:  clamp(14px, 1.2vw, 200px);
-$subtitleWeight: 600;
-
-$fontSize: clamp(14px,1.1vw,200px);
-$fontWeight: 500;
-$fontFamily: 'Raleway';
-$fontColor: #122247;
-
-$baseColor: #122247;
-$darkBaseColor: #060f24;
-
-// DARK THEME VALUES //
-
-// COMPONENT VALUES //
-
-$boxColor: #fff;
-
-$buttonColor: #fff;
-$buttonBorder: #21B5E1;
-
-$hoverColor: transparent;
-$screenColor: transparent;
-
 $gap: 0;
 
+// SPACE
+$paddingVertical: 1vh;
+$paddingHorizontal: 1vw;
+
+// STYLINGS
+$boxShadow: 3px 3px 2px $highlightColor;
+$borderRadiusHigh: 1.5vw;
+$borderRadiusMid: .6vw;
+$borderRadiusLow: .4vw;
+$borderColor: $highlightColor;
+$borderSize: 1px;
+$borderPattern: solid;
+$border: $borderSize $borderPattern $borderColor;
+$borderLight: $borderSize $borderPattern $secondaryColor;
+$outline: none;
+$caretColor: $highlightColor;
+
+// FONT
+$fontSizeBig: clamp(20px, 1.8vw, 200px);
+$fontSizeMedium: clamp(10px,1.4vw,200px);
+$fontSize: clamp(10px,1vw,200px);
+$fontWeightThick: 700;
+$fontWeightMid: 600;
+$fontWeightLight: 500;
+$fontFamily: 'Raleway';
+$fontColor: $highlightColor;
+$textAlign: center;
+
+// EFFECTS
+$transition: all 0.5s;
+$longTransition: all 1s;
+$opacityTransition: $longTransition;
+
+// SCROLLBAR
+$scrollbarDisplay: none;
+
+// EVENTS
+    
+    // HOVER
+    $cursorOnHover: pointer;
+    $hoverOpacity: 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COMPONENT VALUES
+
+// APP
+$appWidth: 100vw;
+$appHeight: 100vh;
+$appMaxWidth: 100vw;
+$appMaxHeight: 100vh;
+$appBorderRadius: 0;
+$appOverflow: hidden;
+$appBg: $primaryColor;
+
+// BOX
+$boxWidth: $width;
+$boxHeight: $height;
+$boxDisplay: $display;
+$boxGridTemplateColumns: $gridTemplateColumns;
+$boxAlignItems: $alignItems;
+$boxJustifyContent: $justifyContent;
+$boxGap: $gap;
+$boxBg: $secondaryColor;
+$boxBorder: 0;
+$boxBorderRadius: $borderRadiusHigh;
+$boxOverflow: visible;
+$boxTransition: $transition;
+$boxScrollBarDisplay: $scrollbarDisplay;
+
+// BOX > WRAP
+$wrapPadding: $paddingVertical $paddingHorizontal  $paddingVertical $paddingHorizontal;
+$wrapBackgroundColor: $hiddenColor;
+$wrapBorderRadius: 0;
+
+// BUTTON
+$buttonBg: $highlightColor;
+$buttonFontColor: $boxBg;
+$buttonBorder: $border;
+$buttonFontFamily: $fontFamily;
+$buttonFontWeight: $fontWeightMid;
+$buttonFontPadding: 0 clamp(10px,1.3vw,200px);
+$buttonPadding: 0;
+// $buttonOutline: $borderSize $borderPattern $primaryColor;
+$buttonOutline: 0;
+
+
+    // BUTTON:HOVER
+    $buttonHoverCursor: $cursorOnHover;
+    $buttonHoverOpacity: $hoverOpacity;
+    $buttonHoverBg: $secondaryColor;
+    $buttonHoverFontColor: $buttonBg;
+    $buttonHoverBoxShadow: $boxShadow;
+
+    // BUTTON:FOCUS
+    $buttonFocusBorder: $borderSize $borderPattern $primaryColor;
+
+
+    // BUTTON > MIDBUTTON
+    $midButtonWidth: 12vw;
+    $midButtonHeight: 8vh;
+    $smallButtonWidth: 6vw;
+    $smallButtonHeight: 4vh;
+
+// BUTTON > NAVBUTTON
+$navButtonBg: $secondaryColor;
+$navButtonBorder: $border;
+$navButtonBorderRadius: $borderRadiusLow;
+$navButtonHeight: 3vw;
+$navButtonWidth: 3vw;
+$navButton: 3vw;
+
+    // BUTTON > NAVBUTTON > HOVER
+    $navButtonHoverCursor: $cursorOnHover;
+    $navButtonHoverOpacity: 1;
+    $navButtonHoverBg: $navButtonBg;
+
+
+// DROPDOWN
+$dropdownOutline: $outline;
+
+// HOVER
+$hoverBg: $hiddenColor;
+
+// INPUT
+$inputBgColor: $softHighlightColor;
+$inputBorderRadius: $borderRadiusMid;
+$inputPadding: 0 1vw;
+$inputFontFamily: $fontFamily;
+$inputFontColor: $fontColor;
+$inputFontSize: $fontSize;
+$inputFontWeight: $fontWeightMid;
+
+    // INPUT::PLACEHOLDER
+    $inputPlaceholderColor: #724a237e;
+    $inputPlaceholderStyle: italic;
+    $inputPlaceholderWeight: $fontWeightMid;
+
+    // INPUT:FOCUS
+    $inputFocusBorder: $border;
+
+
+// LINE
+$lineBg: $separationColor;
+
+// LIST
+$listWidth: fit-content;
+$listMinWidth: fit-content;
+
+// LOGO
+$logoWidth: clamp(80px,8vw,100vw);
+$logoHeight: auto;
+
+    // LOGO > SMALL LOGO    
+    $bigLogoWidth: clamp(150px,14vw,100vw);
+    $smallLogoWidth: clamp(50px,5vw,100vw);
+
+
+
+// NAV
+$navBg: transparent;
+$navJustifyContent: flex-start;
+$navGap: 2vh;
+
+// SCREEN
+$screenWidth: 100vw;
+$screenHeight: 100vh;
+$screenPosition: absolute;
+$screenLeft: 0;
+$screenTop: 0;
+$screenZIndex: 1;
+$screenColor: $hiddenColor;
+
+// TABLE
+$tableWidth: $width;
+$tableHeight: $height;
+$tableDisplay: grid;
+$tableJustifyContent: space-between;
+$tableGap: 0;
+
+// TEXT
+$textFontColor: $fontColor;
+$textFontSize: $fontSize;
+$textFontWeight: $fontWeightLight;
+$textFontFamily: $fontFamily;
+$textTextAlign: $textAlign;
+    
+// TEXT > TITLE
+$titleSize: $fontSizeBig;
+$titleWeight: 700;
+$titleColor: $highlightColor;
+$titleJustifySelf: start;
+$titleAlignSelf: start;
+
+// TEXT > SUBTITLE
+$subtitleSize:  clamp(10px, 1.2vw, 200px);
+$subtitleWeight: 600;
+
+
+
+// EXPORTS
 :export {
-    baseColor: $baseColor;
-    darkBaseColor: $darkBaseColor;
+    primaryColor: $primaryColor;
+    highlightColor: $highlightColor;
+    borderRadiusMid: $borderRadiusMid;
+    buttonHoverBoxShadow: $buttonHoverBoxShadow;
+    boxBorderRadius: $boxBorderRadius;
+    transition: $transition;
 }

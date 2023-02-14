@@ -1,7 +1,11 @@
 @import '../../styles/global.module.scss';
 
 .table {
-    width: $width;
-    height: $height;
-    display: $display;
+    border-radius: 0;
+    overflow: visible;
+    width: $tableWidth;
+    height: $tableHeight;
+    display: $tableDisplay;
+    justify-content: $tableJustifyContent;
+    gap: $tableGap;
 }

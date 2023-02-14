@@ -1,5 +1,11 @@
 @import '../../styles/global.module.scss';
 
 .nav {
-    background-color: $baseColor;
+    background-color: $navBg;
+    justify-content: $navJustifyContent;
+    gap: $navGap
+}
+
+.preAnimation {
+    transform: translate(5vw, 0)
 }

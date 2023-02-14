@@ -1,0 +1,33 @@
+@import '../../styles/global.module.scss';
+
+
+.input{
+    height: 100%;
+    width: 100%;
+    padding: $inputPadding;
+    font-family: $inputFontFamily;
+    font-size: $inputFontSize;
+    font-weight: $inputFontWeight;
+    color: $inputFontColor;
+    border-radius: $inputBorderRadius;
+    background-color: $inputBgColor;
+    border: none;
+    outline: none;
+    caret-color: $caretColor;
+}
+
+.input::placeholder {
+    color: $inputPlaceholderColor;
+    font-style: $inputPlaceholderStyle;
+    font-weight: $inputPlaceholderWeight;
+}
+
+
+.input:focus {
+    border: $inputFocusBorder;
+
+}
+
+.input:-webkit-autofill {
+    background-color: $inputBgColor;
+}

@@ -1,10 +1,16 @@
-import React, { useRef } from 'react';
+import React, { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
 import classes from './box.module.scss'
-
+import variables from '../../styles/global.module.scss'
 export const BoxComponent = (props) => {
-    console.log(props?.events)
-    const ref = useRef()
-    return <div {...props} {...props?.events} ref={ref} className={props?.config?.ghost ? `${classes.ghost} ${props?.className}` : props?.className}>
+    // Animation
+    const ref = useRef(null)
+    useEffect(() => {
+        try {
+            props?.animation == 'opacity' ? ref.current.style.opacity = '1' : <></>;
+        } catch (e) { console.log(e) };
+    }, [ref])
+
+    return <div {...props} ref={ref} >
         {props?.children}
-    </div>
+    </div >
 }

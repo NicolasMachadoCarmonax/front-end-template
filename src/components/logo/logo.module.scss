@@ -1,0 +1,18 @@
+@import '../../styles/global.module.scss';
+
+.logo {
+    width: $logoWidth;
+    height: $logoHeight;
+}
+
+.big_logo {
+    width: $bigLogoWidth;
+    height: $logoHeight;
+
+}
+
+.small_logo {
+    width: $smallLogoWidth;
+    height: $logoHeight;
+
+}

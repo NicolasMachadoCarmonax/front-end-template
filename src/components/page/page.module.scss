@@ -1,0 +1,11 @@
+@import '../../styles/global.module.scss';
+
+.page {
+    width: $appWidth;
+    height: $appHeight;    
+    max-width: $appMaxWidth;
+    max-height: $appMaxHeight;
+    border-radius: $appBorderRadius;
+    overflow: $appOverflow;
+    background-color: $appBg;
+}

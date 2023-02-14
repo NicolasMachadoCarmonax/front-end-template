@@ -1,0 +1,20 @@
+
+.loading div {
+    border: 6px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 100vw;
+}
+.loading div {
+    animation: loading 1s linear infinite;
+}
+
+.loading {
+    justify-self: center;
+    align-self: center;
+    transform: translateZ(0) scale(1);
+}
+
+@keyframes loading {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

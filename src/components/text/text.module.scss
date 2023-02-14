@@ -1,16 +1,20 @@
 @import '../../styles/global.module.scss';
 
 .text {
-    color: $fontColor;
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    font-family: $fontFamily;
-    text-align: center;
+    align-self: center;
+    color: $textFontColor;
+    font-size: $textFontSize;
+    font-weight: $textFontWeight;
+    font-family: $textFontFamily;
+    text-align: $textTextAlign;
 }
 
 .title {
+    justify-self: $titleJustifySelf;
+    align-self: $titleAlignSelf;
     font-size: $titleSize;
     font-weight: $titleWeight;
+    color: $titleColor;
 }
 
 .subtitle {
@@ -18,6 +22,15 @@
     font-weight: $subtitleWeight;
 }
 
-.color {
-    color: $buttonColor;
+.buttonText {
+    color: $buttonFontColor;
+    padding: $buttonFontPadding;
+}
+
+.bold {
+    font-weight: $fontWeightThick;
+}
+
+.blackTitle {
+    color: #000;
 }

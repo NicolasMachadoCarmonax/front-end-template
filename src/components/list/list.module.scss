@@ -1,4 +1,9 @@
 @import '../../styles/global.module.scss';
 
 .list {
+    border-radius: 0;
+    overflow: visible;
+    width: $listWidth;
+    min-width: $listMinWidth;
+    
 }

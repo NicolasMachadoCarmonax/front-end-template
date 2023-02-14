@@ -1,11 +1,50 @@
 @import '../../styles/global.module.scss';
 
 .button {
-    background-color: $buttonColor;
-    border: 1px solid $buttonBorder;
+    height: 100%;
+    width: 100%;
+    background-color: $buttonBg;
+    border: $buttonBorder;
+    font-weight: $buttonFontWeight;
+    color: $buttonFontColor;
+    padding: $buttonPadding;
+    outline: $buttonOutline;
+    font-family: $buttonFontFamily;
 }
 
 .button:hover {
-    cursor: pointer;
-    opacity: .9;
+    cursor: $buttonHoverCursor;
+    opacity: $buttonHoverOpacity;
+    background-color: $buttonHoverBg;
+    box-shadow: $buttonHoverBoxShadow;
+    color: $buttonHoverFontColor;
+
+}
+
+.navButton {
+    height: $navButtonHeight;
+    width: $navButtonWidth;
+    background-color: $navButtonBg;
+    border: $navButtonBorder;
+    border-radius: $navButtonBorderRadius;
+}
+
+.navButton:hover {
+    cursor: $navButtonHoverCursor;
+    opacity: $navButtonHoverOpacity;
+    background-color: $navButtonHoverBg;
+}
+
+.mid {
+    width: $midButtonWidth;
+    height: $midButtonHeight;
+}
+
+.smallBorder {
+    border-radius: $borderRadiusLow;
+}
+
+.buttonBorder {
+    border-radius: $borderRadiusMid;
+
 }

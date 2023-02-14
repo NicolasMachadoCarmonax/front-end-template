@@ -78,3 +78,6 @@ body {
     outline: none
   }
   
+  textarea {
+    resize: none
+  }

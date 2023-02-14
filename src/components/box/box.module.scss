@@ -1,37 +1,38 @@
 @import '../../styles/global.module.scss';
 
 .box {
-    width: $width;
-    height: $height;
-    display: $display;
-    grid-template-columns: $gridTemplateColumns;
-    align-items: $alignItems;
-    justify-content: $justifyContent;
-    gap: $gap;
-    border-radius: $borderRadius;
-    overflow: scroll;
-    background-color: $boxColor;
-    transition: all 0.5s ease-in-out;
+    width: $boxWidth;
+    height: $boxHeight;
+    display: $boxDisplay;
+    grid-template-columns: $boxGridTemplateColumns;
+    align-items: $boxAlignItems;
+    justify-content: $boxJustifyContent;
+    gap: $boxGap;
+    border-radius: $boxBorderRadius;
+    border: $boxBorder;
+    background-color: $boxBg;
+    overflow: $boxOverflow;
+    transition: $boxTransition;
 }
 .box::-webkit-scrollbar { 
-    display: none
+    display: $boxScrollBarDisplay
 }
 
 .wrap {
-    padding-top: $paddingVertical;
-    padding-right: $paddingHorizontal;
-    padding-bottom: $paddingVertical;
-    padding-left: $paddingHorizontal;
-    background-color: transparent;
-    border-radius: 0;
+    padding: $wrapPadding;
+    background-color: $wrapBackgroundColor;
+    border-radius: $wrapBorderRadius;
 }
 
-.color {
-    background-color: $boxColor;
+.verticalSpace {
+    padding: $paddingVertical auto;
+    background-color: $wrapBackgroundColor;
+    border-radius: $wrapBorderRadius;
 }
 
 .horizontalFlex {
     display: flex;
+    
 }
 
 .verticalFlex {
@@ -44,4 +45,19 @@
     border-radius: 0;
     overflow: hidden;
     background-color: transparent;
+}
+
+.scroll {
+    border-radius: 0;
+    overflow: scroll;
+    background-color: transparent;
+}
+
+.blank {
+    background-color: transparent;
+}
+
+.preOpacity {
+    opacity: 0;
+    transition: $opacityTransition
 }

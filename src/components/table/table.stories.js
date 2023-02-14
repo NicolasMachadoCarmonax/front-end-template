@@ -1,6 +1,6 @@
 import React from 'react';
 import TableComponent from './table.component.jsx';
-
+import classes from './table.module.scss'
 export default {
     title: 'App/Table',
     component: TableComponent,
@@ -15,4 +15,4 @@ export default {
     }
 }
 
-export const Table = (props) => <TableComponent {...props} />
+export const Table = (props) => <TableComponent {...props} className={`${classes.table} ${props?.className}`} />

@@ -16,4 +16,4 @@ export default {
     }
 }
 
-export const List = (props) => <ListComponent  {...props} className={`${classes.list}`}/>
+export const List = (props) => <ListComponent  {...props} className={`${classes.list} ${props?.className}`}/>
